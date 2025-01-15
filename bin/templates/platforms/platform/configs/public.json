@@ -1,0 +1,19 @@
+{
+    "platform": "PLATFORM_NAME",
+    "models": [
+        {
+            "name": "",
+            "pagination": true,
+            "filtration": true,
+            "sorting": false
+        }
+    ],
+    "caveats": [
+        {
+            "connectionModelDefinitionId": "xxx",
+            "comments": [
+                ""
+            ]
+        }
+    ]
+}

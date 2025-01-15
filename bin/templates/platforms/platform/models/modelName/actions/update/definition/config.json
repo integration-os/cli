@@ -1,0 +1,38 @@
+{
+    "connectionPlatform": "CONNECTION_PLATFORM",
+    "connectionDefinitionId": "CONNECTION_DEFINITION_ID",
+    "platformVersion": "PLATFORM_VERSION",
+    "title": "",
+    "name": "",
+    "modelName": "MODEL_NAME",
+    "action": "PATCH",
+    "actionName": "update",
+    "baseUrl": "",
+    "path": "",
+    "authMethod": {
+        "type": "",
+        "key": "",
+        "value": ""
+    },
+    "paths": {
+        "request": {
+            "object": "$.body"
+        },
+        "response": {
+            "object": "$.body",
+            "id": "$.body.id",
+            "cursor": null
+        }
+    },
+    "mapping": {
+        "action": "update",
+        "commonModelName": ""
+    },
+    "version": "1.0.0",
+    "schemas": {
+        "headers": null,
+        "queryParams": null,
+        "pathParams": null,
+        "body": null
+    }
+}

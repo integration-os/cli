@@ -1,0 +1,12 @@
+{
+    "connectionDefinitionId": "CONNECTION_DEFINITION_ID",
+    "name": "PLATFORM_NAME",
+    "url": "",
+    "version": "1.0.0",
+    "ownership": {
+        "type": "system",
+        "entity": "Pica",
+        "isInternal": true
+    },
+    "analyzed": false
+}

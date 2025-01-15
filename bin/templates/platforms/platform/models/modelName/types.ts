@@ -1,0 +1,1 @@
+const types = async () => console.log("types.ts");

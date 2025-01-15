@@ -1,0 +1,28 @@
+{
+    "name": "PLATFORM_NAME",
+    "url": "",
+    "description": "",
+    "platformVersion": "",
+    "authentication": [
+        {
+            "name": "",
+            "type": "",
+            "label": "",
+            "placeholder": ""
+        }
+    ],
+    "authMethod": {
+        "type": "",
+        "key": "",
+        "value": ""
+    },
+    "category": "",
+    "image": "",
+    "tags": [],
+    "supportedModels": [
+        {
+            "platformModel": "",
+            "commonModel": ""
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "connectionPlatform": "CONNECTION_PLATFORM",
+    "connectionDefinitionId": "CONNECTION_DEFINITION_ID",
+    "platformVersion": "PLATFORM_VERSION",
+    "title": "",
+    "name": "",
+    "modelName": "MODEL_NAME",
+    "action": "GET",
+    "actionName": "getCount",
+    "baseUrl": "",
+    "path": "",
+    "authMethod": {
+        "type": "",
+        "key": "",
+        "value": ""
+    },
+    "paths": {
+        "request": {
+            "object": null
+        },
+        "response": {
+            "object": "$.body",
+            "id": null,
+            "cursor": null
+        }
+    },
+    "mapping": {
+        "action": "getCount",
+        "commonModelName": ""
+    },
+    "version": "1.0.0",
+    "schemas": {
+        "headers": null,
+        "queryParams": null,
+        "pathParams": null,
+        "body": null
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "headers": {
+        "content-type": "application/json"
+    },
+    "queryParams": null,
+    "pathParams": {
+        "id": "123"
+    },
+    "body": {
+        "id": "123"
+    }
+}

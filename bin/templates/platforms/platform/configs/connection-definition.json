@@ -1,0 +1,32 @@
+{
+    "platform": "PLATFORM_NAME",
+    "platformVersion": "",
+    "type": "api",
+    "name": "",
+    "description": "",
+    "category": "",
+    "image": "",
+    "tags": [
+    ],
+    "authentication": [],
+    "authMethod": {
+        "type": ""
+    },
+    "settings": {
+        "parseWebhookBody": false,
+        "showSecret": false,
+        "allowCustomEvents": false,
+        "oauth": "IS_OAUTH"
+    },
+    "paths": {
+        "id": null,
+        "event": null,
+        "payload": null,
+        "timestamp": "",
+        "secret": "",
+        "signature": null,
+        "cursor": null
+    },
+    "testConnection": null,
+    "active": false
+}

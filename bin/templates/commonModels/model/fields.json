@@ -1,0 +1,17 @@
+[
+    {
+        "name": "id",
+        "datatype": "String",
+        "required": false
+    },
+    {
+        "name": "createdAt",
+        "datatype": "Date",
+        "required": false
+    },
+    {
+        "name": "updatedAt",
+        "datatype": "Date",
+        "required": false
+    }
+]

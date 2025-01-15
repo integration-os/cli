@@ -1,0 +1,1547 @@
+{
+	"structures": {
+		"platformFolder": {
+			"folders": [
+				{
+					"name": "auth",
+					"folders": [
+						{
+							"name": "apiKey",
+							"folders": [],
+							"files": [
+								{
+									"name": "config.json",
+									"template": "platforms/platform/auth/apiKey/config.json"
+								}
+							]
+						},
+						{
+							"name": "basic",
+							"folders": [],
+							"files": [
+								{
+									"name": "config.json",
+									"template": "platforms/platform/auth/basic/config.json"
+								}
+							]
+						},
+						{
+							"name": "bearer",
+							"folders": [],
+							"files": [
+								{
+									"name": "config.json",
+									"template": "platforms/platform/auth/bearer/config.json"
+								}
+							]
+						},
+						{
+							"name": "oauth",
+							"folders": [],
+							"files": [
+								{
+									"name": "init.ts",
+									"template": "platforms/platform/auth/oauth/init.ts",
+									"replace": [
+										{
+											"from": "PLATFORM_NAME",
+											"to": "platformName"
+										}
+									]
+								},
+								{
+									"name": "refresh.ts",
+									"template": "platforms/platform/auth/oauth/refresh.ts",
+									"replace": [
+										{
+											"from": "PLATFORM_NAME",
+											"to": "platformName"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "oauthLegacy",
+							"folders": [],
+							"files": [
+								{
+									"name": "config.json",
+									"template": "platforms/platform/auth/oauthLegacy/config.json"
+								}
+							]
+						}
+					],
+					"files": []
+				},
+				{
+					"name": "configs",
+					"folders": [],
+					"files": [
+						{
+							"name": "connection-definition.json",
+							"template": "platforms/platform/configs/connection-definition.json",
+							"replace": [
+								{
+									"from": "PLATFORM_NAME",
+									"to": "platformName"
+								},
+								{
+									"from": "\"IS_OAUTH\"",
+									"to": "isOauth"
+								}
+							]
+						},
+						{
+							"name": "connection-platform.json",
+							"template": "platforms/platform/configs/connection-platform.json",
+							"replace": [
+								{
+									"from": "PLATFORM_NAME",
+									"to": "platformName"
+								},
+								{
+									"from": "CONNECTION_DEFINITION_ID",
+									"to": "connectionDefinitionId"
+								}
+							]
+						},
+						{
+							"name": "platform.json",
+							"template": "platforms/platform/configs/platform.json",
+							"replace": [
+								{
+									"from": "PLATFORM_NAME",
+									"to": "platformName"
+								}
+							]
+						},
+						{
+							"name": "public.json",
+							"template": "platforms/platform/configs/public.json",
+							"replace": [
+								{
+									"from": "PLATFORM_NAME",
+									"to": "platformName"
+								}
+							]
+						},
+						{
+							"name": "testing.json",
+							"template": "platforms/platform/configs/testing.json"
+						}
+					]
+				},
+				{
+					"name": "models",
+					"folders": [
+						{
+							"name": "modelName",
+							"folders": [
+								{
+									"name": "actions",
+									"folders": [
+										{
+											"name": "getCount",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/getCount/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/getCount/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/getCount/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getCount/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getCount/toCommonModel.js"
+												}
+											]
+										},
+										{
+											"name": "create",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/create/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/create/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/create/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/create/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/create/toCommonModel.js"
+												}
+											]
+										},
+										{
+											"name": "delete",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/delete/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/delete/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/delete/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/delete/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/delete/toCommonModel.js"
+												}
+											]
+										},
+										{
+											"name": "getMany",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/getMany/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/getMany/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/getMany/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getMany/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getMany/toCommonModel.js"
+												}
+											]
+										},
+										{
+											"name": "getOne",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/getOne/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/getOne/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/getOne/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getOne/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/getOne/toCommonModel.js"
+												}
+											]
+										},
+										{
+											"name": "update",
+											"folders": [
+												{
+													"name": "definition",
+													"folders": [],
+													"files": [
+														{
+															"name": "config.json",
+															"template": "platforms/platform/models/modelName/actions/update/definition/config.json",
+															"replace": [
+																{
+																	"from": "MODEL_NAME",
+																	"to": "modelName"
+																},
+																{
+																	"from": "CONNECTION_PLATFORM",
+																	"to": "connectionPlatform"
+																},
+																{
+																	"from": "PLATFORM_VERSION",
+																	"to": "platformVersion"
+																},
+																{
+																	"from": "CONNECTION_DEFINITION_ID",
+																	"to": "connectionDefinitionId"
+																}
+															]
+														},
+														{
+															"name": "responses.json",
+															"template": "platforms/platform/models/modelName/actions/update/definition/responses.json"
+														},
+														{
+															"name": "samples.json",
+															"template": "platforms/platform/models/modelName/actions/update/definition/samples.json"
+														}
+													]
+												}
+											],
+											"files": [
+												{
+													"name": "fromCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/update/fromCommonModel.js"
+												},
+												{
+													"name": "toCommonModel.js",
+													"template": "platforms/platform/models/modelName/actions/update/toCommonModel.js"
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "schema",
+									"folders": [
+										{
+											"name": "tests",
+											"folders": [],
+											"files": [
+												{
+													"name": "sample.json",
+													"template": "platforms/platform/models/modelName/schema/tests/sample.json"
+												},
+												{
+													"name": "tests.spec.ts",
+													"template": "platforms/platform/models/modelName/schema/tests/tests.spec.ts"
+												}
+											]
+										}
+									],
+									"files": [
+										{
+											"name": "fromCommonModel.js",
+											"template": "platforms/platform/models/modelName/schema/fromCommonModel.js"
+										},
+										{
+											"name": "toCommonModel.js",
+											"template": "platforms/platform/models/modelName/schema/toCommonModel.js"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "config.json",
+									"template": "platforms/platform/models/modelName/config.json",
+									"replace": [
+										{
+											"from": "MODEL_NAME",
+											"to": "modelName"
+										},
+										{
+											"from": "PLATFORM_ID",
+											"to": "platformId"
+										},
+										{
+											"from": "CONNECTION_PLATFORM",
+											"to": "connectionPlatform"
+										},
+										{
+											"from": "PLATFORM_VERSION",
+											"to": "platformVersion"
+										},
+										{
+											"from": "CONNECTION_DEFINITION_ID",
+											"to": "connectionDefinitionId"
+										}
+									]
+								},
+								{
+									"name": "sample.json",
+									"template": "platforms/platform/models/modelName/sample.json"
+								},
+								{
+									"name": "types.ts",
+									"template": "platforms/platform/models/modelName/types.ts"
+								}
+							]
+						}
+					],
+					"files": []
+				}
+			],
+			"files": []
+		},
+		"model": {
+			"name": "modelName",
+			"folders": [
+				{
+					"name": "actions",
+					"folders": [
+						{
+							"name": "getCount",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/getCount/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/getCount/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/getCount/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getCount/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getCount/toCommonModel.js"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/create/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/create/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/create/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/create/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/create/toCommonModel.js"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/delete/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/delete/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/delete/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/delete/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/delete/toCommonModel.js"
+								}
+							]
+						},
+						{
+							"name": "getMany",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/getMany/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/getMany/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/getMany/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getMany/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getMany/toCommonModel.js"
+								}
+							]
+						},
+						{
+							"name": "getOne",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/getOne/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/getOne/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/getOne/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getOne/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/getOne/toCommonModel.js"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"folders": [
+								{
+									"name": "definition",
+									"folders": [],
+									"files": [
+										{
+											"name": "config.json",
+											"template": "platforms/platform/models/modelName/actions/update/definition/config.json",
+											"replace": [
+												{
+													"from": "MODEL_NAME",
+													"to": "modelName"
+												},
+												{
+													"from": "CONNECTION_PLATFORM",
+													"to": "connectionPlatform"
+												},
+												{
+													"from": "PLATFORM_VERSION",
+													"to": "platformVersion"
+												},
+												{
+													"from": "CONNECTION_DEFINITION_ID",
+													"to": "connectionDefinitionId"
+												}
+											]
+										},
+										{
+											"name": "responses.json",
+											"template": "platforms/platform/models/modelName/actions/update/definition/responses.json"
+										},
+										{
+											"name": "samples.json",
+											"template": "platforms/platform/models/modelName/actions/update/definition/samples.json"
+										}
+									]
+								}
+							],
+							"files": [
+								{
+									"name": "fromCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/update/fromCommonModel.js"
+								},
+								{
+									"name": "toCommonModel.js",
+									"template": "platforms/platform/models/modelName/actions/update/toCommonModel.js"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "schema",
+					"folders": [
+						{
+							"name": "tests",
+							"folders": [],
+							"files": [
+								{
+									"name": "sample.json",
+									"template": "platforms/platform/models/modelName/schema/tests/sample.json"
+								},
+								{
+									"name": "tests.spec.ts",
+									"template": "platforms/platform/models/modelName/schema/tests/tests.spec.ts"
+								}
+							]
+						}
+					],
+					"files": [
+						{
+							"name": "fromCommonModel.js",
+							"template": "platforms/platform/models/modelName/schema/fromCommonModel.js"
+						},
+						{
+							"name": "toCommonModel.js",
+							"template": "platforms/platform/models/modelName/schema/toCommonModel.js"
+						}
+					]
+				}
+			],
+			"files": [
+				{
+					"name": "config.json",
+					"template": "platforms/platform/models/modelName/config.json",
+					"replace": [
+						{
+							"from": "MODEL_NAME",
+							"to": "modelName"
+						},
+						{
+							"from": "PLATFORM_ID",
+							"to": "platformId"
+						},
+						{
+							"from": "CONNECTION_PLATFORM",
+							"to": "connectionPlatform"
+						},
+						{
+							"from": "PLATFORM_VERSION",
+							"to": "platformVersion"
+						},
+						{
+							"from": "CONNECTION_DEFINITION_ID",
+							"to": "connectionDefinitionId"
+						}
+					]
+				},
+				{
+					"name": "sample.json",
+					"template": "platforms/platform/models/modelName/sample.json"
+				},
+				{
+					"name": "types.ts",
+					"template": "platforms/platform/models/modelName/types.ts"
+				}
+			]
+		},
+		"commonModel": {
+			"name": "modelName",
+			"folders": [],
+			"files": [
+				{
+					"name": "config.json",
+					"template": "commonModels/model/config.json",
+					"replace": [
+						{
+							"from": "MODEL_NAME",
+							"to": "modelName"
+						}
+					]
+				},
+				{
+					"name": "sample.json",
+					"template": "commonModels/model/sample.json"
+				},
+				{
+					"name": "fields.json",
+					"template": "commonModels/model/fields.json"
+				},
+				{
+					"name": "types.rs",
+					"template": "commonModels/model/types.rs",
+					"replace": [
+						{
+							"from": "MODEL_NAME",
+							"to": "modelName"
+						}
+					]
+				},
+				{
+					"name": "types.ts",
+					"template": "commonModels/model/types.ts",
+					"replace": [
+						{
+							"from": "MODEL_NAME",
+							"to": "modelName"
+						}
+					]
+				}
+			]
+		},
+		"commonEnum": {
+			"name": "enumName",
+			"folders": [],
+			"files": [
+				{
+					"name": "config.json",
+					"template": "commonEnums/enum/config.json",
+					"replace": [
+						{
+							"from": "ENUM_NAME",
+							"to": "enumName"
+						}
+					]
+				}
+			]
+		},
+		"platformOAuth": {
+			"name": "platformName",
+			"folders": [
+				{
+					"name": "auth",
+					"folders": [
+						{
+							"name": "oauth",
+							"folders": [],
+							"files": [
+								{
+									"name": "init.ts",
+									"template": "server/oAuth/platform/init.ts",
+									"replace": [
+										{
+											"from": "PLATFORM_NAME",
+											"to": "platformName"
+										}
+									]
+								},
+								{
+									"name": "refresh.ts",
+									"template": "server/oAuth/platform/refresh.ts",
+									"replace": [
+										{
+											"from": "PLATFORM_NAME",
+											"to": "platformName"
+										}
+									]
+								}
+							]
+						}
+					],
+					"files": []
+				}
+			],
+			"files": []
+		}
+	},
+	"paths": {
+		"templates": "bin/templates",
+		"platforms": "",
+		"commonModels": "",
+		"commonEnums": "",
+		"serverOAuth": "",
+		"userConfig": "config.json"
+	},
+	"extractKeys": {
+		"commonModel": [
+			{
+				"path": "config.json",
+				"keys": [
+					"_id",
+					"name",
+					"primary",
+					"category",
+					"version"
+				],
+				"root": false
+			},
+			{
+				"path": "fields.json",
+				"keys": [
+					"fields"
+				],
+				"root": true
+			},
+			{
+				"path": "sample.json",
+				"keys": [
+					"sample"
+				],
+				"root": true
+			},
+			{
+				"path": "types.ts",
+				"keys": [
+					"interface.typescript"
+				],
+				"root": true
+			},
+			{
+				"path": "types.rs",
+				"keys": [
+					"interface.rust"
+				],
+				"root": true
+			}
+		],
+		"commonEnum": [
+			{
+				"path": "config.json",
+				"keys": [
+					"_id",
+					"name",
+					"options"
+				],
+				"root": false
+			}
+		],
+		"platformConnectionDefinition": [
+			{
+				"path": "connection-definition.json",
+				"keys": [
+					"_id",
+					"platformVersion",
+					"status",
+					"key",
+					"type",
+					"name",
+					"authSecrets",
+					"authMethod",
+					"frontend",
+					"paths",
+					"settings",
+					"testConnection",
+					"version",
+					"tags",
+					"active",
+					"description",
+					"multiEnv"
+				],
+				"root": false,
+				"moveToRoot": [
+					{
+						"key": "frontend.spec",
+						"spread": true
+					}
+				]
+			},
+			{
+				"path": "authentication.json",
+				"keys": [
+					"frontend.connectionForm.formData"
+				],
+				"root": true
+			}
+		],
+		"platform": [
+			{
+				"path": "connection-platform.json",
+				"keys": [
+					"_id",
+					"connectionDefinitionId",
+					"name",
+					"url",
+					"platformVersion",
+					"createdAt",
+					"updatedAt",
+					"updated",
+					"version",
+					"lastModifiedBy",
+					"deleted",
+					"changeLog",
+					"tags",
+					"active",
+					"deprecated",
+					"ownership",
+					"analyzed"
+				],
+				"root": false
+			}
+		],
+		"platformModelSchema": [
+			{
+				"path": "config.json",
+				"keys": [
+					"_id",
+					"platformId",
+					"platformPageId",
+					"connectionPlatform",
+					"connectionDefinitionId",
+					"platformVersion",
+					"modelName",
+					"paths.id",
+					"paths.createdAt",
+					"paths.updatedAt",
+					"mapping.commonModelName",
+					"mapping.commonModelId",
+					"mapping.unmappedFields",
+					"version",
+					"schema"
+				],
+				"root": false
+			},
+			{
+				"path": "sample.json",
+				"keys": [
+					"sample"
+				],
+				"root": true
+			},
+			{
+				"path": "schema/fromCommonModel.js",
+				"keys": [
+					"mapping.fromCommonModel"
+				],
+				"root": true
+			},
+			{
+				"path": "schema/toCommonModel.js",
+				"keys": [
+					"mapping.toCommonModel"
+				],
+				"root": true
+			}
+		],
+		"platformModelAction": [
+			{
+				"path": "definition/config.json",
+				"keys": [
+					"_id",
+					"connectionPlatform",
+					"connectionDefinitionId",
+					"platformVersion",
+					"title",
+					"name",
+					"modelName",
+					"action",
+					"actionName",
+					"baseUrl",
+					"path",
+					"authMethod",
+					"paths",
+					"mapping.action",
+					"mapping.commonModelName",
+					"version",
+					"schemas",
+					"headers",
+					"testConnectionStatus",
+					"testConnectionPayload",
+					"active",
+					"supported"
+				],
+				"root": false
+			},
+			{
+				"path": "definition/responses.json",
+				"keys": [
+					"responses"
+				],
+				"root": true
+			},
+			{
+				"path": "definition/samples.json",
+				"keys": [
+					"samples"
+				],
+				"root": true
+			},
+			{
+				"path": "fromCommonModel.js",
+				"keys": [
+					"mapping.fromCommonModel"
+				],
+				"root": true
+			},
+			{
+				"path": "toCommonModel.js",
+				"keys": [
+					"mapping.toCommonModel"
+				],
+				"root": true
+			}
+		],
+		"platformDetail": [
+			{
+				"path": "public.json",
+				"keys": [
+					"_id",
+					"platform",
+					"models",
+					"caveats"
+				],
+				"root": false
+			}
+		],
+		"oauthConnectionDefinition": [
+			{
+				"path": "oauth.json",
+				"keys": [
+					"_id",
+					"configuration",
+					"connectionPlatform",
+					"compute",
+					"frontend"
+				],
+				"root": false
+			}
+		],
+		"platformSchemaPage": [
+			{
+				"path": "page.json",
+				"keys": [
+					"_id",
+					"platformId",
+					"platformName",
+					"connectionDefinitionId",
+					"type",
+					"connectionModelSchemaId",
+					"url",
+					"modelName",
+					"content",
+					"ownership",
+					"analyzed"
+				],
+				"root": false
+			}
+		],
+		"platformActionPage": [
+			{
+				"path": "definition/page.json",
+				"keys": [
+					"_id",
+					"platformId",
+					"platformName",
+					"connectionDefinitionId",
+					"type",
+					"connectionModelSchemaId",
+					"connectionModelDefinitionId",
+					"url",
+					"modelName",
+					"content",
+					"ownership",
+					"analyzed"
+				],
+				"root": false
+			}
+		]
+	},
+	"pushStructures": {
+		"commonModels": {
+			"files": [
+				{
+					"name": "config.json",
+					"root": false
+				},
+				{
+					"name": "sample.json",
+					"root": true,
+					"key": "sample"
+				},
+				{
+					"name": "fields.json",
+					"root": true,
+					"key": "fields"
+				},
+				{
+					"name": "types.ts",
+					"root": true,
+					"key": "interface.typescript",
+					"nested": true
+				},
+				{
+					"name": "types.rs",
+					"root": true,
+					"key": "interface.rust",
+					"nested": true
+				}
+			],
+			"combine": true
+		},
+		"commonEnums": {
+			"files": [
+				{
+					"name": "config.json",
+					"root": false
+				}
+			],
+			"combine": true
+		},
+		"platform": {
+			"connectionDefinition": {
+				"files": [
+					{
+						"name": "configs/connection-definition.json",
+						"root": false
+					},
+					{
+						"name": "configs/authentication.json",
+						"root": true,
+						"key": "authentication"
+					}
+				],
+				"combine": true
+			},
+			"platform": {
+				"files": [
+					{
+						"name": "configs/connection-platform.json",
+						"root": false
+					}
+				],
+				"combine": true
+			},
+			"oauthConnectionDefinition": {
+				"files": [
+					{
+						"name": "configs/oauth.json",
+						"manualStructure": true,
+						"copyKeys": [
+							"_id",
+							"connectionPlatform"
+						],
+						"rearrangeKeys": [
+							{
+								"from": "configuration.init",
+								"to": "init.configuration"
+							},
+							{
+								"from": "configuration.refresh",
+								"to": "refresh.configuration"
+							},
+							{
+								"from": "compute.init.computation.function",
+								"to": "init.compute"
+							},
+							{
+								"from": "compute.init.response.function",
+								"to": "init.responseCompute"
+							},
+							{
+								"from": "compute.refresh.computation.function",
+								"to": "refresh.compute"
+							},
+							{
+								"from": "compute.refresh.response.function",
+								"to": "refresh.responseCompute"
+							}
+						],
+						"spreadToRoot": [
+							"frontend"
+						],
+						"addKeys": {
+							"isFullTemplateEnabled": false
+						}
+					}
+				],
+				"combine": true
+			},
+			"schemaPage": {
+				"files": [
+					{
+						"name": "page.json",
+						"root": false
+					}
+				],
+				"combine": true
+			},
+			"actionPage": {
+				"files": [
+					{
+						"name": "definition/page.json",
+						"root": false
+					}
+				],
+				"combine": true
+			},
+			"schemas": {
+				"name": "config",
+				"files": [
+					{
+						"name": "config.json",
+						"root": false
+					},
+					{
+						"name": "sample.json",
+						"root": true,
+						"key": "sample"
+					},
+					{
+						"name": "schema/fromCommonModel.js",
+						"root": true,
+						"key": "mapping.fromCommonModel",
+						"nested": true
+					},
+					{
+						"name": "schema/toCommonModel.js",
+						"root": true,
+						"key": "mapping.toCommonModel",
+						"nested": true
+					}
+				],
+				"combine": true
+			},
+			"actions": {
+				"name": "config",
+				"files": [
+					{
+						"name": "definition/config.json",
+						"root": false
+					},
+					{
+						"name": "definition/responses.json",
+						"root": true,
+						"key": "responses"
+					},
+					{
+						"name": "definition/samples.json",
+						"root": true,
+						"key": "samples"
+					},
+					{
+						"name": "fromCommonModel.js",
+						"root": true,
+						"key": "mapping.fromCommonModel",
+						"nested": true
+					},
+					{
+						"name": "toCommonModel.js",
+						"root": true,
+						"key": "mapping.toCommonModel",
+						"nested": true
+					}
+				],
+				"combine": true
+			}
+		}
+	},
+	"statics": {
+		"schemaPageContent": {
+			"platformId": "",
+			"connectionDefinitionId": "",
+			"platformName": "",
+			"url": "",
+			"modelName": "",
+			"content": "",
+			"ownership": {
+				"type": "user",
+				"buildableId": "",
+				"clientId": "",
+				"organizationId": null,
+				"projectId": "",
+				"userId": null
+			},
+			"analyzed": true,
+			"type": "schemaUngenerated"
+		},
+		"actionPageContent": {
+			"platformId": "",
+			"connectionDefinitionId": "",
+			"platformName": "",
+			"url": "",
+			"modelName": "",
+			"content": "",
+			"ownership": {
+				"type": "user",
+				"buildableId": "",
+				"clientId": "",
+				"organizationId": null,
+				"projectId": "",
+				"userId": null
+			},
+			"analyzed": true,
+			"type": "actionUngenerated"
+		}
+	},
+	"variables": {
+		"MONGO_PASSWORD": "12345",
+		"BUILDABLE_SECRET": "cywf.D**tGRN6yfFjA6jjEeeJKR7*e",
+		"DEFAULT_LIVE_ACCESS_KEY": "event_access::custom::live::default::event-inc::internal-ui",
+		"DEFAULT_TEST_ACCESS_KEY": "event_access::custom::test::default::event-inc::internal-ui",
+		"DEVELOPER_ACCOUNT_ACCESS_KEY": "sk_test_1_3pejYG_SdSxV9xkt5_GA8WoMsSnfBHvY1qpGhlX-6DKd9kyZO3ee9hWfjGWpt5dY0AzxvM51q6_45_Q6bJTWCTuax7yq4X96nhvB0uTwhhLlsxyJm02JqasmdeDVeHt08GxGPoiBc7I9u00-1EKOejw62kNO0M1EaEFqwaGXw1Y8IfFH",
+		"DEVELOPER_ACCOUNT_ID": "build-cad071f77cd243718a1593add39bdfc8",
+		"EVENT_ACCESS_PASSWORD": "18BBFT_i3UckCmxPwY3GGzgHdxfYs6zA",
+		"JWT_SECRET": "Qsfb9YUkdjwUULX.u96HdTCX4q7GuB",
+		"GATEWAY_SECRET": "replace-this-insecure-secret----"
+	},
+	"env": {
+		"API_URL": "http://localhost:3005",
+		"X_PICA_SECRET": "sk_test_1_3pejYG_SdSxV9xkt5_GA8WoMsSnfBHvY1qpGhlX-6DKd9kyZO3ee9hWfjGWpt5dY0AzxvM51q6_45_Q6bJTWCTuax7yq4X96nhvB0uTwhhLlsxyJm02JqasmdeDVeHt08GxGPoiBc7I9u00-1EKOejw62kNO0M1EaEFqwaGXw1Y8IfFH",
+		"BEARER_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTY0OGZhMjZiMWViNTAwMTIyYzUzMjMiLCJlbWFpbCI6ImRldkBpbnRlZ3JhdGlvbm9zLmNvbSIsInVzZXJuYW1lIjoiaW50ZWdyYXRpb25vcy1kZXYiLCJ1c2VyS2V5IjoiaW50ZWdyYXRpb25vcy1kZXY1MjJlYjIiLCJmaXJzdE5hbWUiOiJJbnRlZ3JhdGlvbk9TIiwibGFzdE5hbWUiOiJEZXZlbG9wZXIiLCJidWlsZGFibGVJZCI6ImJ1aWxkLTFjM2NkN2FmNzU3ZDRhZWJhYjUyM2Y1MzczMTkwZTFiIiwiY29udGFpbmVySWQiOiJidWlsZC0xYzNjZDdhZjc1N2Q0YWViYWI1MjNmNTM3MzE5MGUxYiIsInBvaW50ZXJzIjpbIl8xXzNwZWpZR19TZFN4Vjl4a3Q1X0dBOFdvTXNTbmZCSHZZMXFwR2hsWC02REtkOWt5Wk8zZWU5aFdmakdXcHQ1ZFkwQXp4dk01MXE2XzQ1X1E2YkpUV0NUdWF4N3lxNFg5Nm5odkIwdVR3aGhMbHN4eUptMDJKcWFzbWRlRFZlSHQwOEd4R1BvaUJjN0k5dTAwLTFFS09lanc2MmtOTzBNMUVhRUZxd2FHWHcxWThJZkZIIiwiXzFfaFVPU1d1RzhsZnphV0l2eUE0TkxmM1l1dUZJRl80b0N6RUYwbnVLRGlxeWgwSUE5eWhJcWNya2VCT3NnOEFoWTUwOUVkcXVmU1BXRXZ1TnB3aWI0cHVRTEVickpNNTVIMnBTZ0hjRmppLVRMUFQ1SHZxQTI0VE5DcEpjZDcwb0FmZ0xzSUFxbXFtTThFSlZ5SlFhYTQ0c3ROVUJXRjZBaGc0N1AxS2NGd0ZBSjBJX08iXSwiaXNCdWlsZGFibGVDb3JlIjp0cnVlLCJpYXQiOjE3MTk5MjcwODQsImV4cCI6NDg3NTY4NzA4NCwiYXVkIjoiaW50ZWdyYXRpb25vcy11c2VycyIsImlzcyI6ImludGVncmF0aW9ub3MifQ.uqUHHUZksR2fOiER3G5MS_5gCiJ9_W7W7fQ9wRLIgyw"
+	},
+	"dockerComposeFileUrl": "https://raw.githubusercontent.com/picahq/pica/main/docker-compose.yml",
+	"dockerComposeDataFileUrl": "https://raw.githubusercontent.com/picahq/pica/main/docker-compose.data.yml",
+	"tempFileName": "docker-compose.data.yml",
+	"supportedPlatforms": [
+		"linux",
+		"darwin",
+		"win32"
+	]
+}

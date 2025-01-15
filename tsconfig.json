@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "commonjs",
+        "moduleResolution": "Node",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "allowJs": true,
+        "outDir": "build",
+        "rootDir": "bin",
+        "strict": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "types": [
+            "node",
+            "jest"
+        ],
+        "skipLibCheck": true
+    },
+    "include": [
+        "bin/**/*"
+    ]
+}

@@ -1,0 +1,5 @@
+{
+    "type": "OAuthLegacy",
+    "hashAlgorithm": "HMAC-SHA256|HMAC-SHA1|HMAC-SHA512|PLAINTEXT",
+    "realm": ""
+}

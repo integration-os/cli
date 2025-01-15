@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Build files
+build/
+
+# IDE helper files
+.idea/
+
+# Environment Variable Files
+.env
+.env.cios
+
+# User Configuration File
+./config.json
+
+.DS_Store

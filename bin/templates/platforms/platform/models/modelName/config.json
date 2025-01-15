@@ -1,0 +1,26 @@
+{
+    "platformId": "PLATFORM_ID",
+    "connectionPlatform": "CONNECTION_PLATFORM",
+    "connectionDefinitionId": "CONNECTION_DEFINITION_ID",
+    "platformVersion": "PLATFORM_VERSION",
+    "modelName": "MODEL_NAME",
+    "paths": {
+        "id": "$.id",
+        "createdAt": "$.created_at",
+        "updatedAt": "$.updated_at"
+    },
+    "mapping": {
+        "commonModelName": "",
+        "commonModelId": "",
+        "unmappedFields": {
+            "type": "object",
+            "properties": {},
+            "required": null,
+            "path": null
+        }
+    },
+    "version": "",
+    "schema": {
+        "type": "object"
+    }
+}
