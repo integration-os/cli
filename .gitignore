@@ -9,7 +9,7 @@ build/
 
 # Environment Variable Files
 .env
-.env.cios
+.env.pica
 
 # User Configuration File
 ./config.json
