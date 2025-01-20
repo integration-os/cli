@@ -1,6 +1,6 @@
 {
     "name": "@picahq/cli",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "description": "Build and manage performant, high-converting native integrations with a few lines of code.",
     "main": "build/index.js",
     "scripts": {
