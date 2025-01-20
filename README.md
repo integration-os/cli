@@ -29,7 +29,7 @@ Visit us at [picaos.com](https://picaos.com)
 ## Installation
 
 ```sh
-npm install cios
+npm install pica
 ```
 
 ## Docker Setup
@@ -42,14 +42,14 @@ To start the docker containers. All the inputs are required. Seeding is optional
 command for the first time.
 
 ```Shell
-cios start
+pica start
 ```
 
 ##### Example
 
 ```Shell
 # To start the docker containers
-cios start 
+pica start 
 Enter the IOS Crypto Secret (32 characters long): xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Do you want to seed? (Y/N) y
 ```
@@ -59,7 +59,7 @@ Do you want to seed? (Y/N) y
 To stop the docker containers.
 
 ```Shell
-cios stop
+pica stop
 ```
 
 ## Initialization
@@ -68,14 +68,14 @@ To generate the configuration file. All the inputs are optional. Press enter wit
 system-default value.
 
 ```shell
-cios init
+pica init
 ```
 
 ##### Example
 
 ```Shell
 # To generate the configuration file
-cios init
+pica init
 Enter the Mongo Password: (system default) mongo-password
 Enter the Buildable Secret: (system default) buildable-secret
 Enter the Default Live Access Key: (system default) default-live-access-key
@@ -168,7 +168,7 @@ Perform operations on common enums.
 List common enum(s) available in the database.
 
 ```Shell
-cios list enum
+pica list enum
 ```
 
 #### Add
@@ -176,14 +176,14 @@ cios list enum
 Add common enum(s) to the repository. A warning will be shown if an enum is already available in the Database.
 
 ```Shell
-cios add enum
+pica add enum
 ```
 
 ##### Example
 
 ```Shell
 # To add specific enum(s)
-cios add enum
+pica add enum
 Enter the names of enums: UserStatus WebhookState
 ```
 
@@ -194,19 +194,19 @@ Doing so, will cross-check the data pulled with the data available in the databa
 discrepancy.
 
 ```Shell
-cios pull enum
+pica pull enum
 ```
 
 ##### Examples
 
 ```Shell
 # To pull all enums 
-cios pull enum
+pica pull enum
 Do you want to pull all common enums? (Y/N) y
 Do you want to validate each common enum after pulling? (Y/N) y
 
 # To pull specific enum(s)
-cios pull enum
+pica pull enum
 Do you want to pull all common enums? (Y/N) n
 Enter the names of enums: AddressType SocialProfileType
 Do you want to validate each common enum after pulling? (Y/N) y
@@ -217,18 +217,18 @@ Do you want to validate each common enum after pulling? (Y/N) y
 Push common enum(s) from the repository to the database.
 
 ```Shell
-cios push enum
+pica push enum
 ```
 
 ##### Examples
 
 ```Shell
 # To push all enums 
-cios push enum
+pica push enum
 Do you want to push all common enums? (Y/N) y
 
 # To push specific enum(s)
-cios push enum
+pica push enum
 Do you want to push all common enums? (Y/N) n
 Enter the names of enums: EventRuleType TimeCycle
 ```
@@ -238,14 +238,14 @@ Enter the names of enums: EventRuleType TimeCycle
 Delete common enum(s) from the repository and the database.
 
 ```Shell
-cios delete enum
+pica delete enum
 ```
 
 ##### Example
 
 ```Shell
 # To delete specific enum(s)
-cios delete enum
+pica delete enum
 Enter the names of enums: UserStatus TaxType
 ```
 
@@ -258,7 +258,7 @@ Perform operations on common models.
 List common model(s) available in the database.
 
 ```Shell
-cios list model
+pica list model
 ```
 
 #### Add
@@ -266,14 +266,14 @@ cios list model
 Add common model(s) to the repository. A warning will be shown if a model is already available in the Database.
 
 ```Shell
-cios add model
+pica add model
 ```
 
 ##### Example
 
 ```Shell
 # To add specific model(s)
-cios add model
+pica add model
 Enter the names of models: Contacts Deals
 ```
 
@@ -284,19 +284,19 @@ Doing so, will cross-check the data pulled with the data available in the databa
 discrepancy.
 
 ```Shell
-cios pull model
+pica pull model
 ```
 
 ##### Examples
 
 ```Shell
 # To pull all models 
-cios pull model
+pica pull model
 Do you want to pull all common models? (Y/N) y
 Do you want to validate each common model after pulling? (Y/N) y
 
 # To pull specific model(s)
-cios pull model
+pica pull model
 Do you want to pull all common models? (Y/N) n
 Enter the names of models: Customers Webhooks
 Do you want to validate each common model after pulling? (Y/N) y
@@ -307,18 +307,18 @@ Do you want to validate each common model after pulling? (Y/N) y
 Push common model(s) from the repository to the database.
 
 ```Shell
-cios push model
+pica push model
 ```
 
 ##### Examples
 
 ```Shell
 # To push all models 
-cios push model
+pica push model
 Do you want to push all common models? (Y/N) y
 
 # To push specific model(s)
-cios push model
+pica push model
 Do you want to push all common models? (Y/N) n
 Enter the names of models: Customers Webhooks
 ```
@@ -328,14 +328,14 @@ Enter the names of models: Customers Webhooks
 Delete common model(s) from the repository and the database.
 
 ```Shell
-cios delete model
+pica delete model
 ```
 
 ##### Example
 
 ```Shell
 # To delete specific model(s)
-cios delete model
+pica delete model
 Enter the names of models: Leads Opportunities
 ```
 
@@ -348,7 +348,7 @@ Perform operations on platforms.
 List platform(s) available in the database.
 
 ```Shell
-cios list platform
+pica list platform
 ```
 
 #### Add
@@ -357,14 +357,14 @@ Add platform to the repository. A warning will be shown if a platform is already
 authentication method is oauth.
 
 ```Shell
-cios add platform
+pica add platform
 ```
 
 ##### Example
 
 ```Shell
 # To add a platform
-cios add platform
+pica add platform
 Enter the name of the platform: ZenMail
 Enter the authentication method (oauth/bearer/basic/apiKey/oauthLegacy/none): (oauth) apiKey
 Enter the names of models: Addresses Discounts
@@ -375,14 +375,14 @@ Enter the names of models: Addresses Discounts
 Add model(s) to the platform.
 
 ```Shell
-cios add platformModel
+pica add platformModel
 ```
 
 ##### Example
 
 ```Shell
 # To add model(s) to a platform
-cios addPlatformModel
+pica addPlatformModel
 Enter the name of the platform: BananaShake
 Enter the names of models: Accounts Users
 ```
@@ -392,14 +392,14 @@ Enter the names of models: Accounts Users
 Add oauth configuration for a platform.
 
 ```Shell
-cios add platformOAuth
+pica add platformOAuth
 ``` 
 
 ##### Example
 
 ```Shell
 # To add oauth for a platform
-cios add platformOAuth
+pica add platformOAuth
 Enter the name of the platform: Boogle
 ```
 
@@ -410,19 +410,19 @@ Doing so, will cross-check the data pulled with the data available in the databa
 discrepancy.
 
 ```Shell
-cios pull platform
+pica pull platform
 ```
 
 ##### Examples
 
 ```Shell
 # To pull all platforms
-cios pull platform
+pica pull platform
 Do you want to pull all platforms? (Y/N) y
 Do you want to validate each platform after pulling? (Y/N) y
 
 # To pull specific platform(s)
-cios pull platform 
+pica pull platform 
 Do you want to pull all platforms? (Y/N)
 Enter the names of platforms: FaceGram InstaBook
 Do you want to validate each platform after pulling? (Y/N) y
@@ -433,19 +433,19 @@ Do you want to validate each platform after pulling? (Y/N) y
 Push platform(s) from the repository to the database.
 
 ```Shell
-cios push platform
+pica push platform
 ```
 
 ##### Examples
 
 ```Shell
 # To push all platforms 
-cios push platform
+pica push platform
 Do you want to push all platforms? (Y/N) y
 Do you want to set the actions as active? (Y/N) y
 
 # To push specific platform(s)
-cios push platform 
+pica push platform 
 Do you want to push all platforms? (Y/N) n
 Enter the names of platforms: ShopCommerce Bigify
 Do you want to set the actions as active? (Y/N) y
@@ -456,21 +456,21 @@ Do you want to set the actions as active? (Y/N) y
 Push platform model(s) from the repository to the database. Pushing the model actions will push all actions.
 
 ```Shell
-cios push platformModel
+pica push platformModel
 ```
 
 ##### Examples
 
 ```Shell
 # To push all platform models 
-cios push platformModel
+pica push platformModel
 Enter the name of the platform: Clove
 Do you want to push all the platform models? (Y/N) y
 Do you also want to push all the actions in the selected models? (Y/N) y
 Do you want to set the actions as active? (Y/N) y
 
 # To push specific platform model(s)
-cios push platform Model
+pica push platform Model
 Enter the name of the platform: Bean
 Do you want to push all the platform models? (Y/N) y
 Enter the names of models: Accounts
@@ -483,20 +483,20 @@ Do you want to set the actions as active? (Y/N) y
 Push platform actions from the repository to the database. All actions will be pushed.
 
 ```Shell
-cios push platformAction
+pica push platformAction
 ```
 
 ##### Examples
 
 ```Shell
 # To push all platform model actions 
-cios push platformAction
+pica push platformAction
 Enter the name of the platform: MeetLink
 Do you want to push actions for all the platform models? (Y/N) y
 Do you want to set the actions as active? (Y/N) y
 
 # To push specific platform model actions
-cios push platformAction 
+pica push platformAction 
 Enter the name of the platform: Chrome
 Do you want to push actions for all the platform models? (Y/N) n
 Enter the names of models: Accounts
@@ -508,13 +508,13 @@ Do you want to set the actions as active? (Y/N) y
 Delete platform(s) from the repository and the database.
 
 ```Shell
-cios delete platform
+pica delete platform
 ```
 
 ##### Example
 
 ```Shell
 # To delete specific platform(s)
-cios delete platform
+pica delete platform
 Enter the names of platforms: Bwitter Orange
 ```

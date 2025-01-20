@@ -77,32 +77,6 @@ const executeCommand = async (commands: Record<string, () => Promise<void>>, ent
 
 ((): void => {
     yargs
-        .command("pull [entity]", "Pull model/enum/platform", (yargs) => yargs.positional("entity", {
-            describe: "Entity To Pull: model/enum/platform",
-        }), async (argv) => await executeCommand(pullCommands, argv.entity as string))
-        .command("list [entity]", "List model/enum/platform", (yargs) => yargs.positional("entity", {
-            describe: "Entity To List: model/enum/platform",
-        }), async (argv) => await executeCommand(listCommands, argv.entity as string))
-        .command("push [entity]", "Push model/enum/platform/platformModel/platformAction", (yargs) => yargs.positional("entity", {
-            describe: "Entity To Push: model/enum/platform/platformModel/platformAction",
-        }), async (argv) => await executeCommand(pushCommands, argv.entity as string))
-        .command("delete [entity]", "Delete model/enum/platform", (yargs) => yargs.positional("entity", {
-            describe: "Entity To Delete: model/enum/platform",
-        }), async (argv) => await executeCommand(deleteCommands, argv.entity as string))
-        .command("add [entity]", "Add model/enum/platform/platformModel/platformOAuth", (yargs) => yargs.positional("entity", {
-            describe: "Entity To Add: model/enum/platform/platformModel/platformOAuth",
-        }), async (argv) => await executeCommand(addCommands, argv.entity as string))
-        .command("init", "Init", async () => {
-            try {
-                await init();
-
-                process.exit(0);
-            } catch (error) {
-                console.error(`${error}\r\n`);
-
-                process.exit(1);
-            }
-        })
         .command("start", "Start", async () => {
             try {
                 await start();
@@ -125,6 +99,32 @@ const executeCommand = async (commands: Record<string, () => Promise<void>>, ent
                 process.exit(1);
             }
         })
+        .command("init", "Init", async () => {
+            try {
+                await init();
+
+                process.exit(0);
+            } catch (error) {
+                console.error(`${error}\r\n`);
+
+                process.exit(1);
+            }
+        })
+        .command("pull [entity]", "Pull model/enum/platform", (yargs) => yargs.positional("entity", {
+            describe: "Entity To Pull: model/enum/platform",
+        }), async (argv) => await executeCommand(pullCommands, argv.entity as string))
+        .command("list [entity]", "List model/enum/platform", (yargs) => yargs.positional("entity", {
+            describe: "Entity To List: model/enum/platform",
+        }), async (argv) => await executeCommand(listCommands, argv.entity as string))
+        .command("push [entity]", "Push model/enum/platform/platformModel/platformAction", (yargs) => yargs.positional("entity", {
+            describe: "Entity To Push: model/enum/platform/platformModel/platformAction",
+        }), async (argv) => await executeCommand(pushCommands, argv.entity as string))
+        .command("delete [entity]", "Delete model/enum/platform", (yargs) => yargs.positional("entity", {
+            describe: "Entity To Delete: model/enum/platform",
+        }), async (argv) => await executeCommand(deleteCommands, argv.entity as string))
+        .command("add [entity]", "Add model/enum/platform/platformModel/platformOAuth", (yargs) => yargs.positional("entity", {
+            describe: "Entity To Add: model/enum/platform/platformModel/platformOAuth",
+        }), async (argv) => await executeCommand(addCommands, argv.entity as string))
         .check(async () => verifyServerConnection())
         .fail((message, error, yargs) => {
             if (error) {

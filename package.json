@@ -9,7 +9,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "bin": {
-        "cios": "build/index.js"
+        "pica": "build/index.js"
     },
     "author": "@picahq",
     "license": "GPL-3.0",
