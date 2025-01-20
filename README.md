@@ -29,7 +29,7 @@ Visit us at [picaos.com](https://picaos.com)
 ## Installation
 
 ```sh
-npm install pica
+npm install -g @picahq/cli
 ```
 
 ## Docker Setup
